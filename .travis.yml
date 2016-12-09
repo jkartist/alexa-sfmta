@@ -2,7 +2,9 @@ language: node_js
 node_js:
 - 4.3
 before_script: npm run build-model
-script: npm run build
+script:
+  - npm run build
+  - npm run test
 after_success:
 - ./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls
 env:
