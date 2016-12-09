@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 4.3.x
+  - 4.3
 before_script: npm run build-model
 script: npm run build
 after_success:
