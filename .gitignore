@@ -1,6 +1,8 @@
 node_modules/
 interaction-model/
 dist/
+coverage/
+.nyc_output/
 lines.ts
 stops.ts
 **.js.map
