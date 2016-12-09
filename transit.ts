@@ -62,6 +62,11 @@ export interface Line {
   Name: string
 }
 
+function isLine(object: any): object is Line {
+  const line = <Line>object;
+  return (line.Id !== undefined) && (line.Name !== undefined);
+}
+
 // Request all SFMTA lines from 511.org, e.g. 22, 33, J, etc.
 export function getLines(): Promise<Line[]> {
   let apiOptions = {
@@ -79,7 +84,17 @@ export function getLines(): Promise<Line[]> {
     request(reqOptions, (error, response, body) => {
       if (!error && response.statusCode == 200) {
         try {
-          resolve(parseJSON(body));
+          const lines = parseJSON(body);
+          if (!(lines instanceof Array)) {
+            throw('response is not an array of Lines')
+          }
+          for (let line of lines) {
+            if (!isLine(line)) {
+              throw('response is not an array of Lines');
+            }
+          }
+
+          resolve(lines);
         }
         catch (error) {
           reject({error: error, action: 'parsing getLines response'});

@@ -50,10 +50,24 @@ test('getOperators valid response', t => {
                 });
 });
 
-test('getStops invalid response', t => {
+test('getStops invalid status', t => {
   let sfmta = nock(transit.API_URL)
               .get(/stops/)
               .reply(401, responseFixtures.get('invalid'));
+
+  return transit.getStops()
+                .then(result => {
+                  t.fail();
+                })
+                .catch(error => {
+                  t.pass();
+                });
+});
+
+test('getStops invalid response', t => {
+  let sfmta = nock(transit.API_URL)
+              .get(/stops/)
+              .reply(200, responseFixtures.get('invalid'));
 
   return transit.getStops()
                 .then(result => {
@@ -81,7 +95,7 @@ test('getStops valid response', t => {
                 });
 });
 
-test('getLines invalid response', t => {
+test('getLines invalid status', t => {
   let sfmta = nock(transit.API_URL)
               .get(/lines/)
               .reply(401, responseFixtures.get('invalid'));
@@ -91,6 +105,21 @@ test('getLines invalid response', t => {
                   t.fail();
                 })
                 .catch(error => {
+                  t.pass();
+                });
+});
+
+test('getLines invalid response', t => {
+  let sfmta = nock(transit.API_URL)
+              .get(/lines/)
+              .reply(200, responseFixtures.get('invalid'));
+
+  return transit.getLines()
+                .then(result => {
+                  t.fail();
+                })
+                .catch(error => {
+                  console.log(error);
                   t.pass();
                 });
 });
@@ -111,10 +140,24 @@ test('getLines valid response', t => {
                 });
 });
 
-test('getPredictionsForStop invalid response', t => {
+test('getPredictionsForStop invalid status', t => {
   let sfmta = nock(transit.API_URL)
               .get(/StopMonitoring/)
               .reply(401, responseFixtures.get('invalid'));
+
+  return transit.getPredictionsForStop(12345)
+                .then(result => {
+                  t.fail();
+                })
+                .catch(error => {
+                  t.pass();
+                });
+});
+
+test('getPredictionsForStop invalid response', t => {
+  let sfmta = nock(transit.API_URL)
+              .get(/StopMonitoring/)
+              .reply(200, responseFixtures.get('invalid'));
 
   return transit.getPredictionsForStop(12345)
                 .then(result => {
