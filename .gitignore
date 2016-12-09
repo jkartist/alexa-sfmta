@@ -6,7 +6,5 @@ stops.ts
 **.js.map
 **.js
 .envrc
-yarn.lock
-.yarnclean
 **.log
 **.zip
