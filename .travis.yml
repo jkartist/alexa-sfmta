@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-  - 4.3
+- 4.3
 before_script: npm run build-model
 script: npm run build
 after_success:
-    - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+- ./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls
+env:
+  global:
+    secure: os1OVCwDLA6U6InwM2MNq8HHcVzn5IFrp2rIwrVDyF9AF7SLVRkWY1nE/YDb13RzTJ9OY8gSRxrxsSz6WfHv8Dql/50vuGNKcBHabMBMtCnOUtqOJIrYx8DPKVeN+JeA44iyxnS5MNQGn8OEXOwdR1kftW7lF8XVEp+W+FzrEMS3WuzuKrlSchjV6IviWrmzE72zmKEV9Ao8o18SDpEID8Uw5hVTLOuIpDbFwZ6QJSxf8llQ+hMIwzaBW0DG6ntokItFdv4k3KagSwRqKscp2qrmusIyMzvAGzrJ31+RSDCNzI0HuejZuak6kfFg0tD0Gflms7OKTD606xAZFelUq8s2DTulXlBM0GTKKMZJJ2agTrix8E9L3+RbDvmP82DuHL/xsMly2/c72NyU3OeOzAUHIimz1wJM035JH9k/ajXBw1oZa6STNDg/y13qsaDMs9n5hU19sZIGiH6rjbl5uinThSQ8UGFTPyb1nnKHuA/uOPCS3yEERSmJAz5iBOlacCF6wre7UfvlgnQlDIo2SXLpBUG24/PwJgB5ZfWPAeKKRza0SN3SvwZmHKeXC89lcZ3DuNQ8xKNAXhNntjWk/QR0KkWqnua4kG62sCAsn/eRcpYh67BF6l1IQVvBvl4ddaYozKOK+nZwEQ4Pn0p/smjC3guvBYR7d85yq3ezhK8=
