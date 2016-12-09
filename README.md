@@ -48,6 +48,7 @@ Example: `7|7R`
 
 # Alexa Skill
 Once the Lambda function is set up, you can set up the Alexa Skill. When you get to the Interaction Model page:
+
 1. Copy the schema from `/interaction-model/schema.txt`
 2. Copy the Sample Utterances from `/interaction-model/utterances.txt`
 3. Create a Custom Slot, named `LINEIDS`, and copy the values from `/interaction-model/line-ids.txt`
