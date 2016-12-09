@@ -1,5 +1,8 @@
 # alexa-sfmta
 
+[![Build Status](https://travis-ci.org/jkartist/alexa-sfmta.svg?branch=master)](https://travis-ci.org/jkartist/alexa-sfmta)
+[![Coverage Status](https://coveralls.io/repos/github/jkartist/alexa-sfmta/badge.svg?branch=master)](https://coveralls.io/github/jkartist/alexa-sfmta?branch=master)
+
 An Amazon Alexa skill that allows you to ask Alexa for SFMTA predictions.
 
 **Example:**
