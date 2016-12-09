@@ -12,7 +12,7 @@ fi
 tsc
 
 if [[ $? -ne 0 ]]; then
-  exit $?
+  exit 1
 fi
 
 mkdir -p $STAGE_DIR
