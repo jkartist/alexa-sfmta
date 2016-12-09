@@ -1,0 +1,29 @@
+[
+  {
+    "Id": "3",
+    "Name": "JACKSON",
+    "TransportMode": "bus",
+    "PublicCode": "3",
+    "SiriLineRef": "3",
+    "Montiored": true,
+    "OperatorRef": "SFMTA"
+  },
+  {
+    "Id": "E",
+    "Name": "EMBARCADERO",
+    "TransportMode": "metro",
+    "PublicCode": "E",
+    "SiriLineRef": "E",
+    "Montiored": true,
+    "OperatorRef": "SFMTA"
+  },
+  {
+    "Id": "31BX",
+    "Name": "BALBOA B EXPRESS",
+    "TransportMode": "bus",
+    "PublicCode": "31BX",
+    "SiriLineRef": "",
+    "Montiored": false,
+    "OperatorRef": "SFMTA"
+  }
+]

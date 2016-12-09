@@ -1,0 +1,37 @@
+{
+  "name": "alexa-sfmta",
+  "version": "0.1.0",
+  "description": "Alexa skill that provides SFMTA predictions",
+  "main": "index.js",
+  "scripts": {
+    "build-model": "./build-model.sh",
+    "build": "./build.sh",
+    "clean": "rm -rf dist && rm -f ./*.js && rm -f ./*.js.map",
+    "clean-model": "rm -rf interaction-model && rm -f lines.ts stops.ts",
+    "deploy": "aws lambda update-function-code --function-name $AWS_LAMBDA_FUNCTION_NAME --zip-file fileb://./dist/alexa-sfmta-llambda.zip",
+    "test": "ava --verbose"
+  },
+  "author": "Joel Kustka",
+  "license": "MIT",
+  "dependencies": {
+    "alexa-app": "^2.3.4",
+    "moment": "^2.15.2",
+    "multimap": "^1.0.2",
+    "request": "^2.78.0"
+  },
+  "devDependencies": {
+    "@types/nock": "^8.2.0",
+    "@types/node": "^0.0.2",
+    "@types/request": "^0.0.36",
+    "ava": "^0.17.0",
+    "nock": "^9.0.2",
+    "typescript": "^2.0.10"
+  },
+  "ava": {
+    "files": [
+      "./test/*.js",
+      "!./test/out*.js",
+      "!./test/fixture*.js"
+    ]
+  }
+}

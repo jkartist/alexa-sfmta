@@ -1,0 +1,68 @@
+{
+  "ServiceDelivery": {
+    "ResponseTimestamp": "2016-12-08T20:23Z",
+    "ProducerRef": "sf-muni",
+    "Status": true,
+    "StopMonitoringDelivery": {
+      "version": "1.4",
+      "ResponseTimestamp": "2016-12-08T20:23Z",
+      "Status": true,
+      "MonitoredStopVisit": [
+        {
+          "RecordedAtTime": "2016-12-08T20:23:29Z",
+          "MonitoringRef": "17312",
+          "MonitoredVehicleJourney": {
+            "LineRef": "12",
+            "DirectionRef": "Outbound",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2016-12-08",
+              "DatedVehicleJourneyRef": "7237334"
+            },
+            "PublishedLineName": "12-Folsom Pacific",
+            "OperatorRef": "sf-muni",
+            "Monitored": true,
+            "VehicleLocation": {
+              "Longitude": -122.41631,
+              "Latitude": 37.7957
+            },
+            "MonitoredCall": {
+              "StopPointRef": "17312",
+              "VisitNumber": "1",
+              "StopPointName": "Folsom St and 24th St",
+              "VehicleAtStop": "false",
+              "AimedArrivalTime": "2016-12-08T21:01:00Z",
+              "AimedDepartureTime": "2016-12-08T21:01:00Z"
+            }
+          }
+        },
+        {
+          "RecordedAtTime": "2016-12-08T20:23:29Z",
+          "MonitoringRef": "17312",
+          "MonitoredVehicleJourney": {
+            "LineRef": "67",
+            "DirectionRef": "Outbound",
+            "FramedVehicleJourneyRef": {
+              "DataFrameRef": "2016-12-08",
+              "DatedVehicleJourneyRef": "7272140"
+            },
+            "PublishedLineName": "67-Bernal Heights",
+            "OperatorRef": "sf-muni",
+            "Monitored": true,
+            "VehicleLocation": {
+              "Longitude": -122.41763,
+              "Latitude": 37.75229
+            },
+            "MonitoredCall": {
+              "StopPointRef": "17312",
+              "VisitNumber": "1",
+              "StopPointName": "Folsom St and 24th St",
+              "VehicleAtStop": "false",
+              "AimedArrivalTime": "2016-12-08T21:03:00Z",
+              "AimedDepartureTime": "2016-12-08T21:03:00Z"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "Id": "AC Transit",
+    "Name": "AC Transit",
+    "ShortName": "AC Transit",
+    "SiriOperatorRef": "AC Transit",
+    "TimeZone": "America/Vancouver",
+    "DefaultLanguage": "en",
+    "ContactTelephoneNumber": "510 891-4777 ",
+    "WebSite": "http://www.actransit.org",
+    "PrimaryMode": "bus",
+    "PrivateCode": "AC",
+    "Montiored": true,
+    "OtherModes": ""
+  },
+  {
+    "Id": "Alcatraz Hornblower Ferry",
+    "Name": "Alcatraz Hornblower Ferry",
+    "ShortName": "Hornblower Alcatraz",
+    "SiriOperatorRef": null,
+    "TimeZone": "America/Vancouver",
+    "DefaultLanguage": "en",
+    "ContactTelephoneNumber": null,
+    "WebSite": "http://www.alcatrazcruises.com/index.aspx",
+    "PrimaryMode": "ferry",
+    "PrivateCode": "HF",
+    "Montiored": false,
+    "OtherModes": ""
+  },
+  {
+    "Id": "ACE Altamont Corridor Express",
+    "Name": "Altamont Corridor Express",
+    "ShortName": "ACE",
+    "SiriOperatorRef": "null",
+    "TimeZone": "America/Vancouver",
+    "DefaultLanguage": "en",
+    "ContactTelephoneNumber": "1-800-411-7245",
+    "WebSite": "http://www.acerail.com/",
+    "PrimaryMode": "rail",
+    "PrivateCode": "CE",
+    "Montiored": false,
+    "OtherModes": ""
+  }
+]
