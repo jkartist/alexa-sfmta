@@ -71,17 +71,17 @@ async function buildModel() {
     const lines = await getLines();
     console.log(`Request to 511.org method 'lines' took: ${moment().diff(now, 'seconds', true)} seconds.`);
 
-    console.log(`Getting SFMTA stops from 511.org...`);
+    // console.log(`Getting SFMTA stops from 511.org...`);
+    //
+    // now = moment();
+    // const stops = await getStops();
+    // console.log(`Request to 511.org method 'stops' took: ${moment().diff(now, 'seconds', true)} seconds.`);
 
-    now = moment();
-    const stops = await getStops();
-    console.log(`Request to 511.org method 'stops' took: ${moment().diff(now, 'seconds', true)} seconds.`);
-
-    console.log(`Caching stops and lines to local files...`);
+    console.log(`Caching transit data to local files...`);
 
     // ...cache to file in order that we don't have to query each time.
     // This is to avoid the latency of querying the 511.org API for stops, which can take several seconds
-    saveJsonDataToFile('stops', stops);
+    // saveJsonDataToFile('stops', stops);
     saveJsonDataToFile('lines', lines);
 
     console.log(`Creating slots file line-ids.txt...`);
