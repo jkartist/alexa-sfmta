@@ -52,7 +52,7 @@ function arrayToText(array: any[], conjunction: Conjunction): string {
 
 // The Alexa service isn't capable of speaking certain characters.
 // Ampersand was thankfully the only one I stumbled across. In my case,
-// the llambda invocation succeeded, but Alexa was didn't speak a single word of the response. (Silent failure.)
+// the lambda invocation succeeded, but Alexa was didn't speak a single word of the response. (Silent failure.)
 function sanitizeTextForAlexa(name: string): string {
   return name.replace('&', 'and');
 }
@@ -106,8 +106,8 @@ function sfmtaPredictionIntentHandler(request, response) {
   console.log('sfmtaPredictionIntentHandler invoked with line: ' + requestedLineId);
 
   if (stopIds === undefined) {
-    console.log(`No stopIds have been set. Please add the STOP_IDS environment variable to your llambda function.`);
-    response.say(`I'm not sure which stops you'd like me to monitor. Please add the stop I.D. environment variable to your llambda function.`);
+    console.log(`No stopIds have been set. Please add the STOP_IDS environment variable to your lambda function.`);
+    response.say(`I'm not sure which stops you'd like me to monitor. Please add the stop I.D. environment variable to your lambda function.`);
     response.send();
     return;
   }

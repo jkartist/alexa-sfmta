@@ -2,7 +2,7 @@
 
 BUILD_DIR=./dist
 STAGE_DIR=$BUILD_DIR/stage
-PACKAGE=../alexa-sfmta-llambda.zip
+PACKAGE=../alexa-sfmta-lambda.zip
 BUILD_CMD="npm install"
 
 if hash yarn 2>/dev/null; then
